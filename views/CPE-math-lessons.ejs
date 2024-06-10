@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <link rel="stylesheet" href="style.css"> <!-- Update with your actual CSS file -->
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .lesson {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .lesson h2 {
+            margin-top: 0;
+        }
+
+        .lesson p, .lesson .content {
+            white-space: pre-wrap; /* Ensure newlines and spaces are preserved */
+            word-wrap: break-word; /* Ensure long words are wrapped */
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Lessons</h1>
+    <% lessons.forEach(function(lesson) { %>
+        <div class="lesson">
+            <h2><%= lesson.topicName %></h2>
+            <p><%= lesson.description %></p>
+            <div class="button-group">
+                <a href="/pdf/topic_data/<%= lesson.topic_id %>" target="_blank" class="button">View PDF</a>
+                <a href="/send-lessons-email/<%= lesson.topic_id %>" class="button">Send to Email</a>
+            </div>
+        </div>
+    <% }); %>
+    <a href="/topic-course" class="button">Back to Select Course</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+h1 {
+    text-align: center;
+    color: #5C677D;
+}
+.assessment {
+    border: 1px solid #E7EAF3;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.progress {
+    width: 70px;
+    height: 70px;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 5px #b1b1b1;
+}
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 5;
+}
+.progress-value {
+    position: absolute;
+    z-index: 10;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #5C677D;
+}
+.progress-bar {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: #76C7C0;
+    border-radius: 50%;
+    position: absolute;
+    clip: rect(0px, 70px, 70px, 35px);
+}
+.progress-bar-left {
+    transform: rotate(0deg);
+    animation: left-progress 1s linear forwards;
+}
+.progress-bar-right {
+    transform: rotate(180deg);
+    animation: none;
+}
+@keyframes left-progress {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(180deg); }
+}
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+    color: #444;
+}
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #5C677D;
+    border: 1px solid #5C677D;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+a:hover {
+    background-color: #5C677D;
+    color: white;
+}

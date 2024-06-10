@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= subject %> PDFs</title>
+    <link rel="stylesheet" href="/pdf.css">
+</head>
+<body>
+<div class="container">
+    <h1><%= subject %> PDFs</h1>
+    <ul>
+        <% if (pdfs.length === 0) { %>
+            <li>No PDF files available.</li>
+        <% } else { %>
+            <% pdfs.forEach(function(pdf) { %>
+                <li><a href="/public/<%= pdf.filename %>" target="_blank"><%= pdf.filename %></a></li>
+            <% }); %>
+        <% } %>
+    </ul>
+    <a href="/topic-subject-BSCPE" class="button back-button-red">Back to Topics</a>
+</div>
+</body>
+</html>

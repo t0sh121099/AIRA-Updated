@@ -1,0 +1,102 @@
+/* Reset some default styles */
+body, h1, p, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container for the form */
+.container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+/* Styling the form title */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Styling for individual questions */
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling for question text */
+.question p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Styling for text input fields */
+.question input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Styling for buttons */
+button, .back-button-red {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Styling for the back button */
+.back-button-red {
+    background-color: #d9534f;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Hover effects for buttons */
+button:hover, .back-button-red:hover {
+    background-color: #45a049;
+}
+.back-button-red:hover {
+    background-color: #c9302c;
+}
+
+/* Styling for form alignment */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Centering the container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRA Dashboard</title>
+    <link rel="stylesheet" href="/homepage.css">
+</head>
+<body>
+<div class="container">
+
+    <% if (messages.error) { %>
+        <div id="error-alert" class="alert alert-danger"><%= messages.error %></div>
+    <% } %>
+    <% if (messages.success) { %>
+        <div id="success-alert" class="alert alert-success"><%= messages.success %></div>
+    <% } %>
+
+    <h1>AIRA</h1>
+    <p>Hello there, <%= name %></p>
+    <p>Greetings! I'm AIRA, your AI Reviewer Assistant. I'm here to make your reviewing process seamless and insightful.</p>
+    <!-- Existing buttons -->
+    <a href="/select-course" class="button">Take a Test</a>
+    <a href="/topic-course" class="button">Topics</a>
+    <a href="/assessment" class="button">Assessment</a>
+    <a href="/logout" class="button">Log Out</a>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var alerts = document.querySelectorAll('.alert');
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+                alert.style.display = 'none';
+            }, 2000);
+        });
+    });
+</script>
+</body>
+</html>

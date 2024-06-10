@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="/login.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <style>
+    </style>
+</head>
+<body>
+
+    <button id="installBtn" style="display:none;" onclick="promptInstall()">Install</button>
+<!-- Login Form -->
+<div id="login" class="form-container" style="display: block;">
+    <h2>Login</h2>
+
+    <% if (messages.error) { %>
+        <div id="error-alert" class="alert alert-danger"><%= messages.error %></div>
+    <% } %>
+    <% if (messages.success) { %>
+        <div id="success-alert" class="alert alert-success"><%= messages.success %></div>
+    <% } %>
+  
+    <form action="/login" method="POST">
+    
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="email">
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="password">
+
+        <button type="submit">Login</button>
+        <!-- Button to show the registration form -->
+        <p>Don't have account? <a href="/register">Register</a></p>
+    </form>
+</div>
+<script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Topics</title>
+    <link rel="stylesheet" href="/review.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Review Topics</h1>
+        <ul>
+            <% topics.forEach(function(topic) { %>
+                <li><a href="/review-topic/<%= topic.TopicID %>"><%= topic.TopicName %></a></li>
+            <% }); %>
+        </ul>
+        <a href="/homepage" class="button back-button-red">Back to Dashboard</a>
+    </div>
+</body>
+
+</html>

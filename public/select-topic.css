@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Adjust width to fit content appropriately */
+    max-width: 600px; /* Maximum width to prevent overly wide buttons on large screens */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+.button {
+    display: inline-block; /* Align with text */
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 100%; /* Full width for easier clickability */
+    box-sizing: border-box; /* Include padding and border in the width */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.button:hover {
+    background-color: #555; /* Slightly lighter color on hover */
+}
+
+.back-button-red {
+    background: #d9534f; /* Bootstrap’s 'btn-danger' red color */
+    color: white; /* White text color for readability */
+}
+
+.back-button-red:hover {
+    background: #c9302c; /* A slightly darker red on hover */
+}
+
+.spinner {
+    border: 6px solid #f3f3f3; /* Light grey border */
+    border-radius: 50%; /* Circular spinner */
+    border-top: 6px solid #3498db; /* Blue border on top for the spinning effect */
+    width: 60px; /* Size of the spinner */
+    height: 60px; /* Size of the spinner */
+    animation: spin 2s linear infinite; /* Spinning animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

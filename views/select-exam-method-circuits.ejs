@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Exam Method for Circuits Multiple Choice Questions</title>
+    <link rel="stylesheet" href="/select-question-type.css">
+</head>
+<body>
+<div class="container">
+    <h1>Select Exam Method for Multiple Choice Questions in Circuits</h1>
+    <ul>
+        <li><a href="/take-exam-web/multiple-choice/circuits">Take Exam on Web</a></li>
+        <li><a href="/send-exam-email/multiple-choice/circuits">Send Exam via Email</a></li>
+    </ul>
+    <a href="/select-topic-BSEE/Professional%20Subjects/circuits" class="back-button-red">Back to select question type</a>
+</div>
+<div class="loader" id="loader"></div>
+
+<script>
+document.getElementById('sendExamLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Show the loading spinner
+    document.getElementById('loader').style.display = 'block';
+
+    // Simulate sending the exam via email
+    fetch('/send-exam-email/computational/circuits', {
+        method: 'POST' // Assuming the email sending endpoint uses POST method
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Exam sent successfully!');
+        } else {
+            alert('There was an error sending the exam.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending the exam.');
+    })
+    .finally(() => {
+        // Hide the loading spinner
+        document.getElementById('loader').style.display = 'none';
+    });
+});
+</script>
+</body>
+</html>

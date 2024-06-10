@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light grey for the background */
+    color: #000000; /* Black color for text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form Styles */
+#register {
+    background-color: #d3d3d3; /* Light grey for the form background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    width: 300px; /* Fixed width, adjust as needed */
+}
+
+#register h2 {
+    color: #000000; /* Black color for headings */
+    margin-bottom: 20px;
+}
+
+label, input[type="email"], input[type="password"], input[type="text"], button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc; /* Add border to make inputs distinct */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #333; /* Dark grey for the button */
+    color: #ffffff; /* White text color for the button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #494949; /* Lighter shade of grey for hover effect */
+}
+
+.alert {
+    padding: 10px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.alert-success {
+    background-color: #4CAF50; /* Green for success messages */
+}
+
+.alert-danger {
+    background-color: #f44336; /* Red for error messages */
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential Calculus Computational Exam</title>
+    <link rel="stylesheet" href="/computational-exam-form.css">
+</head>
+<body>
+<div class="container">
+    <h1>Differential Calculus Computational Exam</h1>
+    <form action="/submit-computational-exam" method="POST">
+        <input type="hidden" name="topicId" value="<%= topicId %>">
+        <input type="hidden" name="questionType" value="Computational">
+        
+        <% if (questions.length > 0) { %>
+            <% questions.forEach(function(question, index) { %>
+                <div class="question">
+                    <p>Question <%= index + 1 %>: <%= question.question %></p>
+                    <input type="hidden" name="q<%= index %>Id" value="<%= question.id %>">
+                    <input type="text" name="q<%= index %>Answer" placeholder="Your Answer" required>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No questions available.</p>
+        <% } %>
+
+        <button type="submit">Submit Exam</button>
+        <a href="/homepage" class="back-button-red">Back to Dashboard</a>
+    </form>
+</div>
+</body>
+</html>

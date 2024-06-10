@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px; /* Limiting max width for better reading experience */
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Adds space around the container */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem; /* Adjusted bottom margin for better spacing */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem; /* Space before the back button */
+}
+
+li {
+    margin-bottom: 1rem; /* Space between list items */
+}
+
+a {
+    color: #0056b3; /* Default blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #004494; /* Darker blue on hover/focus */
+}
+
+.button, .back-button {
+    display: block; /* Make the back button a block to occupy the full line */
+    width: 100%; /* Full width */
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px; /* Space from the list */
+    background: #c0c0c0; /* Neutral gray background */
+    color: black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button-red {
+    background-color: #d9534f;
+    color: white;
+}
+
+.back-button-red:hover {
+    background-color: #c9302c;
+}

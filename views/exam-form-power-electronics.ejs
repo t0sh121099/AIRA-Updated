@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Electronics Multiple Choice Exam</title>
+    <link rel="stylesheet" href="/exam-form.css">
+</head>
+<body>
+<div class="container">
+    <h1>Power Electronics Multiple Choice Exam</h1>
+    <form action="/submit-exam" method="POST">
+        <input type="hidden" name="topicId" value="<%= topicId %>">
+        <input type="hidden" name="questionType" value="Multiple Choice">
+        <% questions.forEach(function(question, index) { %>
+            <div class="question">
+                <p><%= index + 1 %>. <%= question.question %></p>
+                <div>
+                    <input type="radio" id="q<%= index %>a" name="q<%= index %>" value="A" required>
+                    <label for="q<%= index %>a">A. <%= question.option_a %></label>
+                </div>
+                <div>
+                    <input type="radio" id="q<%= index %>b" name="q<%= index %>" value="B">
+                    <label for="q<%= index %>b">B. <%= question.option_b %></label>
+                </div>
+                <div>
+                    <input type="radio" id="q<%= index %>c" name="q<%= index %>" value="C">
+                    <label for="q<%= index %>c">C. <%= question.option_c %></label>
+                </div>
+                <div>
+                    <input type="radio" id="q<%= index %>d" name="q<%= index %>" value="D">
+                    <label for="q<%= index %>d">D. <%= question.option_d %></label>
+                </div>
+            </div>
+        <% }); %>
+        <button type="submit">Submit Exam</button>
+    </form>
+    <a href="/homepage" class="back-button-red">Back to Dashboard</a>
+</div>
+</body>
+</html>

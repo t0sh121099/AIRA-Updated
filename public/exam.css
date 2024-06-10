@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+h1 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.question {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    position: relative; /* Added for positioning the radio buttons */
+}
+.question p {
+    font-weight: bold;
+    color: #555;
+}
+input[type="radio"] {
+    vertical-align: middle;
+    margin: 0;
+    position: absolute; /* Position radio buttons absolutely within the question div */
+    left: 10px; /* Distance from the left */
+}
+label {
+    display: block;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px; /* Larger text for better readability on small screens */
+    padding-left: 40px; /* Make space for the radio button */
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px; /* Larger button for easier clicking on small devices */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .question {
+        padding: 20px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

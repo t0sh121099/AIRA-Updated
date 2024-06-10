@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Dark shade of navy green for the background */
+    color: black; /* White color for text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form Styles */
+.form-container {
+    background-color: rgb(211, 211, 211); /* Slightly lighter shade of navy green for the form background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: none; /* Hide by default */
+}
+
+#login, #register {
+    display: none; /* Both forms hidden by default */
+}
+
+.form-container h2 {
+    color: #000000; /* Soft, almost white color for headings */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333; /* Navy green button */
+    color: white; /* White text color for button */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #494949; /* Lighter shade for hover effect */
+}
+
+#installBtn {
+    position: fixed; /* Fixed position */
+    top: 10px;       /* From the top */
+    right: 10px;     /* From the right */
+    padding: 10px 20px; /* Comfortable padding */
+    font-size: 16px; /* Readable text size */
+    background-color: #333; /* Dark grey for visibility */
+    color: white;    /* White text for contrast */
+    border: none;    /* No border for a cleaner look */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Cursor indicates clickable */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    display: block; /* Overriding 'display:none;' when it needs to be shown */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+#installBtn:hover {
+    background-color: #555; /* Slightly lighter grey on hover */
+}
+
+
+.alert {
+    padding: 10px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+.alert-success {
+    background-color: #4CAF50; /* Green */
+}
+
+.alert-danger {
+    background-color: #f44336; /* Red */
+}

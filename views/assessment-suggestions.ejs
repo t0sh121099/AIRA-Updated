@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Suggestions</title>
+    <link rel="stylesheet" href="/suggest.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assessment Suggestions</h1>
+        <h2>Suggested Lessons</h2>
+        <ul>
+            <% if (suggestions && suggestions.length > 0) { %>
+                <% suggestions.forEach(function(suggestion) { %>
+                    <li>
+                        <strong><%= suggestion.topicName %></strong>
+                        <a href="/pdf/<%= suggestion.topicID %>" target="_blank">View PDF</a>
+                    </li>
+                <% }); %>
+            <% } else { %>
+                <p>No suggestions at this time. Keep up the good work!</p>
+            <% } %>
+        </ul>
+
+        <h2>Areas to Improve</h2>
+        <ul>
+            <% if (weakAreas && weakAreas.length > 0) { %>
+                <% weakAreas.forEach(function(weakArea) { %>
+                    <li>
+                        <strong><%= weakArea.topicName %></strong>
+                    </li>
+                <% }); %>
+            <% } %>
+        </ul>
+
+        <a href="/homepage" class="back-button">Back to Homepage</a>
+    </div>
+</body>
+</html>
