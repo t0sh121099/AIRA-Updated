@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/register.css">
 </head>
 <body>
-<div id="register">
+<div class="form-container" id="register">
     <h2>Register</h2>
 
     <% if (messages.error) { %>
@@ -16,7 +16,7 @@
     <% if (messages.success) { %>
         <div id="success-alert" class="alert alert-success"><%= messages.success %></div>
     <% } %>
-  
+
     <form action="/register" method="POST">
 
         <label for="registerfirstname">First Name:</label>
@@ -34,7 +34,9 @@
         <label for="confirmPassword">Confirm Password:</label>
         <input type="password" id="confirmPassword" name="confirmPassword">
 
-        <button type="submit">Register</button>
+        <div class="button-container">
+            <button type="submit">Register</button>
+        </div>
 
         <p>Already have an account? <a href="/login">Login</a></p>
     </form>

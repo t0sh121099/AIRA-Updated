@@ -1,13 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
+    height: 100vh;
+    background-color: #0f51328a;
+  }
 
 .container {
     background-color: #ffffff;
@@ -57,7 +57,7 @@ p {
 
 .back-button {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #2b5532;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -66,6 +66,6 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.back-button:hover {
-    background-color: #0056b3;
-}
+.button:hover {
+    background: #2b5532ad;
+  }

@@ -1,7 +1,9 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light grey for the background */
-    color: #000000; /* Black color for text */
+    background: url('AIRA 1.png') no-repeat center center fixed, #0f51328a; /* Semi-transparent green overlay */
+    background-size: contain;
+    background-blend-mode: overlay;
+    color: #0F5132; /* Text color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,55 +12,91 @@ body {
 }
 
 /* Form Styles */
-#register {
-    background-color: #d3d3d3; /* Light grey for the form background */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    width: 300px; /* Fixed width, adjust as needed */
+.form-container {
+    background: rgba(255, 255, 255, 0.8); /* White background with slightly higher opacity */
+    padding: 30px; /* Increased padding for better visibility */
+    border-radius: 10px; /* Slightly larger border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for better contrast */
+    display: block; /* Ensure the form-container is displayed */
 }
 
-#register h2 {
-    color: #000000; /* Black color for headings */
+#register {
+    display: block; /* Ensure the register form is displayed */
+}
+
+.form-container h2 {
+    color: #0F5132; /* Heading color */
     margin-bottom: 20px;
 }
 
-label, input[type="email"], input[type="password"], input[type="text"], button {
+label {
     display: block;
-    width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-input[type="email"], input[type="password"], input[type="text"] {
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc; /* Add border to make inputs distinct */
+    margin-bottom: 20px;
+    border: none;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 button {
+    width: 100%; /* Make the button the same width as the input fields */
+    background-color: #0F5132; /* Button color */
+    color: white; /* Text color for button */
     padding: 10px 15px;
-    background-color: #333; /* Dark grey for the button */
-    color: #ffffff; /* White text color for the button */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #494949; /* Lighter shade of grey for hover effect */
+    background-color: #0f513265; /* Hover effect */
+}
+
+#installBtn {
+    position: fixed; /* Fixed position */
+    top: 10px;       /* From the top */
+    right: 10px;     /* From the right */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Text size */
+    background-color: #333; /* Button background color */
+    color: white;    /* Text color */
+    border: none;    /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor for button */
+    transition: background-color 0.3s; /* Smooth transition */
+    display: block; /* Display block */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+#installBtn:hover {
+    background-color: #555; /* Hover background color */
 }
 
 .alert {
     padding: 10px;
+    background-color: #f44336; /* Red */
     color: white;
     margin-bottom: 15px;
 }
 
 .alert-success {
-    background-color: #4CAF50; /* Green for success messages */
+    background-color: #4CAF50; /* Green */
 }
 
 .alert-danger {
-    background-color: #f44336; /* Red for error messages */
+    background-color: #f44336; /* Red */
 }

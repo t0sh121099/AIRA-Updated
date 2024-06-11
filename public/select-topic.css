@@ -6,8 +6,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
-}
+    background-color: #0f51328a;
+  }
 
 .container {
     text-align: center;
@@ -36,21 +36,20 @@ li {
 }
 
 .button {
-    display: inline-block; /* Align with text */
-    padding: 10px 20px;
-    background: #333;
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 20px auto;
+    background: #2b5532;
     color: white;
     border: none;
     border-radius: 5px;
-    text-decoration: none;
-    width: 100%; /* Full width for easier clickability */
-    box-sizing: border-box; /* Include padding and border in the width */
-    transition: background-color 0.3s; /* Smooth background color transition on hover */
-}
-
-.button:hover {
-    background-color: #555; /* Slightly lighter color on hover */
-}
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: #2b5532ad;
+  }
 
 .back-button-red {
     background: #d9534f; /* Bootstrap’s 'btn-danger' red color */

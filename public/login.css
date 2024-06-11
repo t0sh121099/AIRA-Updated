@@ -1,7 +1,9 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Dark shade of navy green for the background */
-    color: black; /* White color for text for contrast */
+    background: url('AIRA 1.png') no-repeat center center fixed, #0f51328a; /* Semi-transparent green overlay */
+    background-size: contain;
+    background-blend-mode: overlay;
+    color: #0F5132; /* Text color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,11 +13,10 @@ body {
 
 /* Form Styles */
 .form-container {
-    background-color: rgb(211, 211, 211); /* Slightly lighter shade of navy green for the form background */
+    background: rgba(255, 255, 255, 0.8); /* White background with transparency */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    display: none; /* Hide by default */
 }
 
 #login, #register {
@@ -23,7 +24,7 @@ body {
 }
 
 .form-container h2 {
-    color: #000000; /* Soft, almost white color for headings */
+    color: #0F5132; /* Heading color */
     margin-bottom: 20px;
 }
 
@@ -43,9 +44,16 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 button {
-    background-color: #333; /* Navy green button */
-    color: white; /* White text color for button */
+    width: 100%; /* Make the button the same width as the input fields */
+    background-color: #0F5132; /* Button color */
+    color: white; /* Text color for button */
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -54,29 +62,28 @@ button {
 }
 
 button:hover {
-    background-color: #494949; /* Lighter shade for hover effect */
+    background-color: #0f513265; /* Hover effect */
 }
 
 #installBtn {
     position: fixed; /* Fixed position */
     top: 10px;       /* From the top */
     right: 10px;     /* From the right */
-    padding: 10px 20px; /* Comfortable padding */
-    font-size: 16px; /* Readable text size */
-    background-color: #333; /* Dark grey for visibility */
-    color: white;    /* White text for contrast */
-    border: none;    /* No border for a cleaner look */
-    border-radius: 5px; /* Slightly rounded corners */
-    cursor: pointer; /* Cursor indicates clickable */
-    transition: background-color 0.3s; /* Smooth transition on hover */
-    display: block; /* Overriding 'display:none;' when it needs to be shown */
-    z-index: 1000; /* Ensure it's above other elements */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Text size */
+    background-color: #333; /* Button background color */
+    color: white;    /* Text color */
+    border: none;    /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor for button */
+    transition: background-color 0.3s; /* Smooth transition */
+    display: block; /* Display block */
+    z-index: 1000; /* Ensure it is above other elements */
 }
 
 #installBtn:hover {
-    background-color: #555; /* Slightly lighter grey on hover */
+    background-color: #555; /* Hover background color */
 }
-
 
 .alert {
     padding: 10px;
